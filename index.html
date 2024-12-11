@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Direct Download</title>
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(234,172,232,1) 64%, rgba(246,219,245,1) 89%);
+        font-family: system-ui, -apple-system, sans-serif;
+        padding: 1rem;
+      }
+      .container {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(10px);
+        border-radius: 1rem;
+        padding: 2.5rem;
+        text-align: center;
+        max-width: 42rem;
+        margin: 0 auto;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        animation: fadeIn 0.6s ease-out;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+        color: #1A1F2C;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      p {
+        font-size: 1.25rem;
+        color: #4B5563;
+        margin-bottom: 2rem;
+        line-height: 1.6;
+      }
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 2.5rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: white;
+        background: linear-gradient(to right, #9b87f5, #7E69AB);
+        border: none;
+        border-radius: 0.75rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .download-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(to right, #8B5CF6, #7E69AB);
+      }
+      .download-btn:active {
+        transform: translateY(0);
+      }
+      .download-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+        animation: bounce 2s infinite;
+      }
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-4px);
+        }
+      }
+      .logo {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <svg class="logo" viewBox="0 0 24 24" fill="none" stroke="#9b87f5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+      </svg>
+      <h1>Premium IPTV Access</h1>
+      <p>Get instant access to 90+ live TV channels</p>
+      <button class="download-btn" onclick="handleDownload()">
+        <svg class="download-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Access Now
+      </button>
+    </div>
+
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script>
+      function handleDownload() {
+        window.open("https://www.mediafire.com/file/b0ekgvse3yleen3/ceeplayz.apk/file", "_blank");
+      }
+      // Automatically trigger download when page loads
+      window.onload = handleDownload;
+    </script>
+  </body>
+</html>
